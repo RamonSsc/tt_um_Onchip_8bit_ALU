@@ -1,6 +1,6 @@
 # Tiny Tapeout project information
 project:
-  title:        "8-bit ALU with Status Flags"      # Project title
+  title:        "Onchip-UIS 8-bit ALU with Status Flags"      # Project title
   author:       "Nicolas Orcasitas"      # Your name
   discord:      "zhord0326"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
   description:  "A 8-bit ALU with registered inputs, 8 arithmetic/logic operations, and 8 configurable status flags."      # One line description of what your project does
