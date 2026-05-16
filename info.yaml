@@ -1,9 +1,9 @@
 # Tiny Tapeout project information
 project:
-  title:        "4-bit ALU with Status Flags"      # Project title
+  title:        "8-bit ALU with Status Flags"      # Project title
   author:       "Nicolas Orcasitas"      # Your name
   discord:      "zhord0326"      # Your discord username, for communication and automatically assigning you a Tapeout role (optional)
-  description:  "A 4-bit ALU with registered inputs, 8 arithmetic/logic operations, and 8 configurable status flags."      # One line description of what your project does
+  description:  "A 8-bit ALU with registered inputs, 8 arithmetic/logic operations, and 8 configurable status flags."      # One line description of what your project does
   language:     "Verilog" # other examples include SystemVerilog, Amaranth, VHDL, etc
   clock_hz:     1000000       # Clock frequency in Hz (or 0 if not applicable)
 

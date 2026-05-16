@@ -10,7 +10,7 @@ module tt_um_ALU_Porca (
 );
 
 reg [3:0] A, B;
-reg flag, overflow;
+reg flag;
 reg [7:0] out;
 
 wire [2:0] ALUcontrol;
@@ -54,8 +54,8 @@ end
 // ALU control
 always @(*) begin
     case (ALUcontrol)
-        3'b000: {out[7:0]} = A + B;                 // Adition
-        3'b001: {out[7:0]} = A - B;                 // Substraction
+        3'b000: {out[7:0]} = {4'b0000, A[3:0]} + {4'b0000, B[3:0]};                 // Adition
+        3'b001: {out[7:0]} = {4'b0000, A[3:0]} - {4'b0000, B[3:0]};                 // Substraction
         3'b010: {out[7:0]} = {5'b00000, A[3:1]};           // Shift right
         3'b011: {out[7:0]} = {3'b000, A[3:0], 1'b0};           // Shift left
         3'b100: {out[7:0]} = {4'b0000, (A & B)};                 // AND
@@ -78,7 +78,7 @@ always @(*) begin
         3'b101: flag = A == B;       // Equal
         3'b110: flag = B == 4'd0;    // B Equal zero
         3'b111: flag = B[0] == 0;    // Check even
-        default: flag = 3'd0;
+        default: flag = 1'b0;
     endcase
 end
 /*
